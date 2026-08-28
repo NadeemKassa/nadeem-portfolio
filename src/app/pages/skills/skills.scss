@@ -1,0 +1,45 @@
+/* Offset for fixed navbar */
+.skills-section {
+  padding-top: 100px;
+}
+
+/* Uniform icon box sizing */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Card hover effect */
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+  }
+}
+
+/* Soft styling for the progress bars */
+.progress {
+  background-color: var(--bs-secondary-bg);
+  overflow: visible; /* Allows the pill shape to render perfectly */
+}
+
+/* Simple load-in animation for the progress bars */
+.progress-bar {
+  animation: loadProgress 1.5s ease-out forwards;
+  transform-origin: left;
+}
+
+@keyframes loadProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

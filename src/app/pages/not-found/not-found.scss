@@ -1,0 +1,31 @@
+/* Clear the fixed navbar space */
+.not-found-section {
+  padding-top: 80px;
+}
+
+/* Smooth hover effects for buttons */
+.transition-all {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+}
+
+/* Gentle floating animation for the 404 icon */
+.floating-icon {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,26 @@
+/* Padding to ensure it clears the fixed navbar */
+.projects-section {
+  padding-top: 100px;
+}
+
+/* Card Hover Animation */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    
+    /* Optional: slightly darken the button on card hover for emphasis */
+    .btn-outline-primary {
+      background-color: var(--bs-primary);
+      color: white;
+    }
+  }
+}
+
+/* Ensure badges are clearly legible */
+.badge {
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+}

@@ -1,0 +1,30 @@
+/* Offset for the fixed navbar */
+.project-details-section {
+  padding-top: 100px;
+}
+
+/* Improve readability of long text blocks */
+.lh-lg {
+  line-height: 1.8 !important;
+}
+
+/* Back button hover effect */
+.hover-primary {
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  
+  &:hover {
+    color: var(--bs-primary) !important;
+    transform: translateX(-5px);
+  }
+}
+
+/* Tracking utility for small uppercase labels */
+.tracking-wide {
+  letter-spacing: 1px;
+}
+
+/* Ensure the sticky sidebar doesn't overlap the navbar */
+.position-sticky {
+  z-index: 1;
+}

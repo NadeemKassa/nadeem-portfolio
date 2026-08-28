@@ -1,0 +1,33 @@
+/* Spacing to clear the fixed top navbar */
+.experience-section {
+  padding-top: 100px;
+}
+
+/* Card layout enhancements */
+.experience-card {
+  transition: box-shadow 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+  }
+}
+
+/* Subtle hover interaction for the project boxes */
+.project-box {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--bs-primary) !important;
+  }
+}
+
+/* Better readability for badges */
+.badge {
+  font-weight: 500;
+  padding: 0.6em 1em;
+}
+
+.tracking-wide {
+  letter-spacing: 1px;
+}

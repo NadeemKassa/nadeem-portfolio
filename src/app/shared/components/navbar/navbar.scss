@@ -1,0 +1,232 @@
+.portfolio-navbar {
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    padding 0.3s ease;
+
+  background: transparent;
+
+  .container {
+    position: relative;
+  }
+
+  // ==========================================
+  // Logo
+  // ==========================================
+
+  .logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+
+    .logo-bracket {
+      color: #00d9ff;
+    }
+  }
+
+  // ==========================================
+  // Navigation Links
+  // ==========================================
+
+  .navbar-nav {
+    gap: 5px;
+  }
+
+  .nav-link {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 8px 12px !important;
+
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+
+    &:hover {
+      color: #00d9ff;
+    }
+
+    &.active {
+      color: #00d9ff;
+      font-weight: 600;
+    }
+
+    // Active underline
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 2px;
+
+      height: 2px;
+
+      background: #00d9ff;
+
+      transform: scaleX(0);
+      transform-origin: center;
+
+      transition: transform 0.3s ease;
+    }
+
+    &.active::after {
+      transform: scaleX(1);
+    }
+  }
+
+  // ==========================================
+  // Scrolled Navbar
+  // ==========================================
+
+  &.scrolled {
+    padding: 10px 0;
+
+    background: rgba(10, 15, 30, 0.95);
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+
+  }
+
+  // ==========================================
+  // Theme Button
+  // ==========================================
+
+  .theme-btn {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      transform 0.3s ease;
+
+    &:hover {
+      background: rgba(0, 217, 255, 0.15);
+      border-color: #00d9ff;
+      transform: rotate(15deg);
+    }
+  }
+
+  // ==========================================
+  // Bootstrap Hamburger
+  // ==========================================
+
+  .navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 7px 9px;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+}
+
+// ==========================================
+// Tablet / Mobile
+// ==========================================
+
+@media (max-width: 991.98px) {
+
+  .portfolio-navbar {
+
+    .navbar-collapse {
+      margin-top: 15px;
+
+      padding: 15px;
+
+      border-radius: 12px;
+
+      background: rgba(10, 15, 30, 0.98);
+
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .navbar-nav {
+      gap: 3px;
+      align-items: stretch !important;
+    }
+
+    .nav-item {
+      width: 100%;
+    }
+
+    .nav-link {
+      padding: 11px 12px !important;
+
+      border-radius: 6px;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        background: rgba(0, 217, 255, 0.08);
+      }
+
+      &.active {
+        background: rgba(0, 217, 255, 0.12);
+      }
+    }
+
+    .theme-btn {
+      margin-top: 10px;
+    }
+  }
+}
+
+// ==========================================
+// Small Mobile
+// ==========================================
+
+@media (max-width:  768px) {
+
+  .portfolio-navbar {
+    padding: 14px 0;
+
+      .navbar-logo {
+    width: 190px;
+    height: 42px;
+  }
+
+    &.scrolled {
+      padding: 10px 0;
+    }
+  }
+}
+.navbar-logo {
+  width: 260px;
+  height: 52px;
+  display: block;
+  object-fit: contain;
+}
+
+.navbar-brand {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}

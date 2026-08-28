@@ -1,0 +1,60 @@
+/* Padding to clear fixed navbar */
+.showcase-section {
+  padding-top: 100px;
+}
+
+/* Custom styling for the side navigation pills */
+.custom-pills {
+  .nav-link {
+    color: var(--bs-body-color);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    
+    &:hover {
+      background-color: var(--bs-secondary-bg);
+    }
+    
+    &.active {
+      background-color: var(--bs-primary-subtle);
+      color: var(--bs-primary-emphasis);
+      border-color: var(--bs-primary);
+      box-shadow: 0 4px 10px rgba(var(--bs-primary-rgb), 0.15);
+    }
+  }
+}
+
+/* IDE Code Block Styling */
+.code-block-wrapper {
+  background-color: #1e1e1e; /* Standard VS Code dark background */
+  
+  pre {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1e1e1e;
+    
+    code {
+      color: #d4d4d4;
+    }
+    
+    /* Mock syntax highlighting colors */
+    .language-csharp {
+      color: #9cdcfe;
+    }
+  }
+}
+
+/* Smooth content transition */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,29 @@
+/* Add spacing below the fixed navbar */
+.about-section {
+  padding-top: 100px; 
+}
+
+/* Card Styling & Hover Effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.08) !important;
+  }
+}
+
+/* Ensure text line-height is readable for long paragraphs */
+.lh-lg {
+  line-height: 1.8 !important;
+}
+
+/* Icon box styling for lists */
+.d-flex .rounded-circle {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}

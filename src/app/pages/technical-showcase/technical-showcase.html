@@ -1,0 +1,155 @@
+<section class="showcase-section py-5 min-vh-100 mt-5">
+  <div class="container">
+    
+    <!-- Page Header -->
+    <div class="row mb-5 text-center">
+      <div class="col-12">
+        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-3 py-2 mb-2 fw-medium">
+          Under the Hood
+        </span>
+        <h2 class="display-5 fw-bold mb-3">Technical <span class="text-primary">Showcase</span></h2>
+        <p class="lead text-muted mx-auto" style="max-width: 650px;">
+          A deeper dive into my architectural decisions, third-party API integrations, and how I write clean, scalable backend code.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Left Column: Navigation Tabs -->
+      <div class="col-lg-4">
+        <!-- <div class="nav flex-column nav-pills custom-pills gap-3" role="tablist"> -->
+          
+          <!-- API Button -->
+          <button class="nav-link text-start p-4 rounded-4 fw-medium border border-light-subtle shadow-sm bg-body-tertiary" 
+                  [class.active-tab]="activeTab === 'api'" 
+                  (click)="setTab('api')">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-plug-fill fs-4 me-3" 
+                 [class.text-white]="activeTab === 'api'" 
+                 [class.text-primary]="activeTab !== 'api'"></i>
+              <h5 class="fw-bold mb-0">API & LLM Integration</h5>
+            </div>
+            <p class="small mb-0 opacity-75 fw-normal">RESTful architectures and Generative AI connections.</p>
+          </button>
+          
+          <!-- Azure Button -->
+          <button class="nav-link text-start p-4 rounded-4 fw-medium border border-light-subtle shadow-sm bg-body-tertiary" 
+                  [class.active-tab]="activeTab === 'azure'" 
+                  (click)="setTab('azure')">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-cloud-arrow-up-fill fs-4 me-3" 
+                 [class.text-white]="activeTab === 'azure'" 
+                 [class.text-info]="activeTab !== 'azure'"></i>
+              <h5 class="fw-bold mb-0">Azure Blob Storage</h5>
+            </div>
+            <p class="small mb-0 opacity-75 fw-normal">Secure cloud file streaming and dependency management.</p>
+          </button>
+          
+          <!-- SQL Button -->
+          <button class="nav-link text-start p-4 rounded-4 fw-medium border border-light-subtle shadow-sm bg-body-tertiary" 
+                  [class.active-tab]="activeTab === 'sql'" 
+                  (click)="setTab('sql')">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-database-fill-gear fs-4 me-3" 
+                 [class.text-white]="activeTab === 'sql'" 
+                 [class.text-success]="activeTab !== 'sql'"></i>
+              <h5 class="fw-bold mb-0">SQL Optimization</h5>
+            </div>
+            <p class="small mb-0 opacity-75 fw-normal">Stored procedures and high-performance data architecture.</p>
+          </button>
+
+        <!-- </div> -->
+      </div>
+
+      <!-- Right Column: Tab Content -->
+      <div class="col-lg-8">
+        <div class="card border-light-subtle shadow-sm rounded-4 bg-body-tertiary h-100 p-4 p-md-5">
+          
+          <!-- TAB 1: API & AI Integration -->
+          @if (activeTab === 'api') {
+            <div class="fade-in">
+              <h3 class="fw-bold mb-3 text-primary">RESTful APIs & Generative AI</h3>
+              <p class="text-body-secondary lh-lg mb-4">
+                I specialize in bridging standard enterprise applications with modern third-party services, including Large Language Models (LLMs) like ChatGPT and Gemini. This involves securely handling API keys on the backend, formatting dynamic prompts, and parsing JSON responses.
+              </p>
+              
+              <h6 class="fw-bold mb-3">Implementation Flow:</h6>
+              <div class="d-flex align-items-center gap-2 mb-4 overflow-x-auto pb-2">
+                <span class="badge bg-secondary">Angular UI</span>
+                <i class="bi bi-arrow-right text-muted"></i>
+                <span class="badge bg-primary">C# Controller</span>
+                <i class="bi bi-arrow-right text-muted"></i>
+                <span class="badge bg-info text-dark">HttpClient</span>
+                <i class="bi bi-arrow-right text-muted"></i>
+                <span class="badge bg-warning text-dark">LLM / External API</span>
+              </div>
+
+              <div class="code-block-wrapper rounded-4 overflow-hidden shadow-sm border border-secondary-subtle">
+                <div class="code-header px-4 py-2 bg-dark text-light border-bottom border-secondary d-flex justify-content-between align-items-center">
+                  <span class="small font-monospace text-muted">IntegrationService.cs</span>
+                  <i class="bi bi-code-slash text-primary"></i>
+                </div>
+                <pre class="m-0 p-4 bg-dark text-light overflow-x-auto"></pre>
+              </div>
+            </div>
+          }
+
+          <!-- TAB 2: Azure Storage -->
+          @if (activeTab === 'azure') {
+            <div class="fade-in">
+              <h3 class="fw-bold mb-3 text-info">Azure Blob Storage Management</h3>
+              <p class="text-body-secondary lh-lg mb-4">
+                In enterprise systems like the Rights Management System (RMS), handling media and document files directly on the server is inefficient. I utilize <code>Azure.Storage.Blobs</code> to securely stream, upload, and retrieve critical business documents in the cloud.
+              </p>
+              
+              <div class="alert alert-info border-0 bg-info-subtle text-info-emphasis rounded-4 mb-4 p-4">
+                <div class="d-flex">
+                  <i class="bi bi-info-circle-fill me-3 fs-4"></i> 
+                  <div>
+                    <strong>Dependency Resolution:</strong> Experienced in troubleshooting complex assembly binding issues across multi-project solutions to ensure consistent cloud connections and high system uptime.
+                  </div>
+                </div>
+              </div>
+
+              <h6 class="fw-bold mb-3">Key Capabilities:</h6>
+              <ul class="list-unstyled text-body-secondary">
+                <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-info me-3 mt-1"></i> Secure, direct-to-cloud file streaming for heavy assets.</li>
+                <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-info me-3 mt-1"></i> Generating SAS (Shared Access Signature) tokens for temporary, secure downloads.</li>
+                <li class="d-flex"><i class="bi bi-check-circle-fill text-info me-3 mt-1"></i> Managing architecture isolation between Web and Service layers.</li>
+              </ul>
+            </div>
+          }
+
+          <!-- TAB 3: SQL Server -->
+          @if (activeTab === 'sql') {
+            <div class="fade-in">
+              <h3 class="fw-bold mb-3 text-success">SQL Server & Data Architecture</h3>
+              <p class="text-body-secondary lh-lg mb-4">
+                A robust backend is nothing without an optimized database. I specialize in designing normalized database structures, writing complex stored procedures via ADO.NET and Entity Framework, and ensuring data integrity for large-scale applications like eDMS.
+              </p>
+              
+              <div class="row g-4 mt-2">
+                <div class="col-md-6">
+                  <div class="p-4 bg-body rounded-4 border border-light-subtle h-100 shadow-sm">
+                    <i class="bi bi-file-earmark-code fs-3 text-success mb-3 d-block"></i>
+                    <h6 class="fw-bold">Stored Procedures</h6>
+                    <p class="text-muted small mb-0">Moving complex business logic and bulk data operations to the database layer to reduce network latency and improve application speed.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-4 bg-body rounded-4 border border-light-subtle h-100 shadow-sm">
+                    <i class="bi bi-speedometer2 fs-3 text-success mb-3 d-block"></i>
+                    <h6 class="fw-bold">Performance Tuning</h6>
+                    <p class="text-muted small mb-0">Analyzing execution plans, mitigating deadlocks, and implementing strategic indexing to speed up read-heavy enterprise queries.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>

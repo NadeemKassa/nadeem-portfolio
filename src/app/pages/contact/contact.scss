@@ -1,0 +1,40 @@
+.contact-section {
+  padding-top: 100px;
+}
+
+/* Contact Info Cards Hover Effect */
+.info-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateX(10px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.08) !important;
+  }
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Form Input Enhancements */
+.form-control {
+  &:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+  }
+}
+
+/* Custom styling for floating labels so they look good in Dark Mode */
+[data-bs-theme="dark"] {
+  .form-floating label {
+    color: var(--bs-secondary-color);
+  }
+  .form-control:focus ~ label {
+    color: var(--bs-primary);
+  }
+}

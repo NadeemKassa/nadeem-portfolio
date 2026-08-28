@@ -1,0 +1,132 @@
+<section class="contact-section py-5 min-vh-100 mt-5">
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="row mb-5 text-center text-lg-start">
+      <div class="col-12">
+        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-3 py-2 mb-2 fw-medium">
+          Let's Connect
+        </span>
+        <h2 class="display-5 fw-bold mb-3">Contact <span class="text-primary">Me</span></h2>
+        <p class="lead text-muted mx-auto mx-lg-0" style="max-width: 600px;">
+          Have a question or want to work together? Leave a message below or reach out directly through my contact details.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      
+      <!-- Left Column: Contact Information -->
+      <div class="col-lg-5">
+        <div class="d-flex flex-column gap-4">
+          
+          <!-- Location Card -->
+          <div class="card border-light-subtle shadow-sm rounded-4 bg-body-tertiary info-card">
+            <div class="card-body p-4 d-flex align-items-center">
+              <div class="bg-primary-subtle text-primary rounded-circle p-3 me-4 icon-box">
+                <i class="bi bi-geo-alt-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Location</h5>
+                <p class="text-body-secondary mb-0">Baghpat & Noida, UP, India</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Card -->
+          <div class="card border-light-subtle shadow-sm rounded-4 bg-body-tertiary info-card">
+            <div class="card-body p-4 d-flex align-items-center">
+              <div class="bg-success-subtle text-success rounded-circle p-3 me-4 icon-box">
+                <i class="bi bi-envelope-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Email</h5>
+                <p class="text-body-secondary mb-0">NadKassar79&#64;gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LinkedIn / Social Card -->
+          <div class="card border-light-subtle shadow-sm rounded-4 bg-body-tertiary info-card">
+            <div class="card-body p-4 d-flex align-items-center">
+              <div class="bg-info-subtle text-info rounded-circle p-3 me-4 icon-box">
+                <i class="bi bi-linkedin fs-4"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">LinkedIn</h5>
+               <a class="text-body-secondary mb-0" href="https://www.linkedin.com/in/nadeem-kassar-4449611a3/" target="_blank"
+                 rel="noopener noreferrer">Connect with me</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: The Form -->
+      <div class="col-lg-7">
+        <div class="card border-light-subtle shadow-sm rounded-4 h-100">
+          <div class="card-body p-4 p-md-5">
+            <h4 class="fw-bold mb-4">Send a Message</h4>
+            
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              
+              <div class="row g-3">
+                <!-- Name Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control bg-body-tertiary border-light-subtle" id="nameInput" placeholder="John Doe" formControlName="name">
+                    <label for="nameInput">Your Name</label>
+                  </div>
+                  <div *ngIf="isSubmitted && contactForm.get('name')?.errors" class="text-danger small mt-1 ps-2">
+                    Name is required.
+                  </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control bg-body-tertiary border-light-subtle" id="emailInput" placeholder="name@example.com" formControlName="email">
+                    <label for="emailInput">Email Address</label>
+                  </div>
+                  <div *ngIf="isSubmitted && contactForm.get('email')?.errors" class="text-danger small mt-1 ps-2">
+                    Valid email is required.
+                  </div>
+                </div>
+
+                <!-- Subject Field -->
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input type="text" class="form-control bg-body-tertiary border-light-subtle" id="subjectInput" placeholder="Project Inquiry" formControlName="subject">
+                    <label for="subjectInput">Subject</label>
+                  </div>
+                </div>
+
+                <!-- Message Field -->
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control bg-body-tertiary border-light-subtle" placeholder="Leave a message here" id="messageInput" style="height: 150px" formControlName="message"></textarea>
+                    <label for="messageInput">Your Message</label>
+                  </div>
+                  <div *ngIf="isSubmitted && contactForm.get('message')?.errors" class="text-danger small mt-1 ps-2">
+                    Message must be at least 10 characters long.
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-sm w-100 w-md-auto d-flex align-items-center justify-content-center">
+                    Send Message <i class="bi bi-send ms-2"></i>
+                  </button>
+                </div>
+              </div>
+              
+            </form>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
