@@ -72,15 +72,7 @@ export const routes: Routes = [
         .then(m => m.Contact)
   },
    {
-    path: 'resume',
-    loadComponent: () =>
-      import('./pages/resume/resume')
-        .then(m => m.Resume)
-  },
-
-  {
-    path: '404',
-    loadComponent: () =>
+   path: '404',    loadComponent: () =>
       import('./pages/not-found/not-found')
         .then(m => m.NotFound)
   },

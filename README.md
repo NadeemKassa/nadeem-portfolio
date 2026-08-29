@@ -36,6 +36,18 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Deployment
+
+This project is configured for static hosting and GitHub Pages deployment.
+
+- The Angular router uses hash-based URLs so the portfolio works correctly on static hosts without server rewrites.
+- The app uses a relative base URL (`./`) so assets load correctly when the site is served from a repository subpath.
+- The GitHub Actions workflow is defined at `.github/workflows/deploy.yml` and uploads the generated `dist/browser` output.
+
+```bash
+npm run build
+```
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
