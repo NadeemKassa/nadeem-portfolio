@@ -1,0 +1,1 @@
+import{Bt as mc,W as TD,lt as aI,mn as vc}from"./chunk-BoHNCYkZ.js";var s=class t{static ɵfac=function(e){return new(e||t)};static ɵcmp=aI({type:t,selectors:[[`app-github`]],decls:2,vars:0,template:function(e,p){e&1&&(mc(0,`p`),TD(1,`github works!`),vc())},encapsulation:2,changeDetection:1})};export{s as Github};
